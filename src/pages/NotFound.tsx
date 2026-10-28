@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { CompassIcon, HomeIcon } from 'lucide-react';
 import { CityCard } from '../components/CityCard';

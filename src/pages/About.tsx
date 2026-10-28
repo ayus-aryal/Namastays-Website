@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { HandCoinsIcon, UsersIcon, MapPinnedIcon, LeafIcon } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';

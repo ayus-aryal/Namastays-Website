@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { LayoutGridIcon, MapIcon, SlidersHorizontalIcon } from 'lucide-react';
 import { City, FoodListing, ListingCategory, Stay, Trek } from '../types';
 import { FilterChips } from './FilterChips';

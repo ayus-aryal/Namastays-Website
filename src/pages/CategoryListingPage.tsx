@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRightIcon } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -37,7 +36,7 @@ const copy: Record<
     h1: (city) => `Treks and hikes near ${city}`,
     lead: (city) =>
     `Trails around ${city} with real distance, duration and elevation data, recorded by hikers using the Namastays app. Filter by difficulty and length, then review the GPX track before you go.`,
-    body: (city) => [
+    body: () => [
     `Every route below has been walked and recorded by members of the Namastays community. Stats come from aggregated GPS tracks rather than agency brochures, so the distances and elevation gains reflect what people actually walked.`,
     `Namastays is not a trekking agency and does not sell guided packages. We publish route data, permit requirements and community reviews, and list the independently owned teahouses along the way.`]
 

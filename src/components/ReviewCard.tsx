@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThumbsUpIcon, BadgeCheckIcon } from 'lucide-react';
 import { Review } from '../types';
 import { Rating } from './Rating';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ImagesIcon, XIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import { cx } from '../utils/format';
 

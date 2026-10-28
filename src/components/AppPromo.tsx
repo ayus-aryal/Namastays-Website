@@ -1,4 +1,3 @@
-import React from 'react';
 import { ActivityIcon, MapIcon, StarIcon } from 'lucide-react';
 import { IMG } from '../data/images';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPinIcon, HeartIcon, RouteIcon, TrendingUpIcon, ClockIcon } from 'lucide-react';
 import { FoodListing, ListingCategory, Stay, Trek } from '../types';
@@ -16,13 +15,6 @@ type ListingCardProps =
 ({category: 'stays';item: Stay;cityName?: string;} & Base) |
 ({category: 'food';item: FoodListing;cityName?: string;} & Base) |
 ({category: 'treks';item: Trek;cityName?: string;} & Base);
-
-const difficultyTone: Record<Trek['difficulty'], 'forest' | 'ember' | 'neutral'> = {
-  Easy: 'forest',
-  Moderate: 'forest',
-  Challenging: 'ember',
-  Strenuous: 'ember'
-};
 
 export function ListingCard(props: ListingCardProps) {
   const { category, item, cityName, className, layout = 'grid' } = props;

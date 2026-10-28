@@ -1,4 +1,3 @@
-import React from 'react';
 
 type ElevationProfileProps = {
   /** Elevation samples in metres, evenly spaced along the route. */

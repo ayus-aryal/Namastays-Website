@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapContainer, TileLayer, CircleMarker, Polyline, Tooltip } from 'react-leaflet';
 import { cx } from '../utils/format';
 

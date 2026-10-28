@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { BedDoubleIcon, UtensilsCrossedIcon, MountainSnowIcon } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';

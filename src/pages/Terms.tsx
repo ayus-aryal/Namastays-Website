@@ -1,4 +1,3 @@
-import React from 'react';
 import { LegalLayout, LegalSection } from '../components/LegalLayout';
 
 const sections: LegalSection[] = [
