@@ -1,39 +1,55 @@
-import { PLAY_STORE_URL } from '../lib/app';
+import { SmartphoneIcon, ArrowUpRightIcon } from 'lucide-react';
+import { PLAY_BADGE_IMAGE, PLAY_STORE_URL } from '../lib/app';
 import { cx } from '../utils/format';
-
-const playPath =
-  'M4 3.3v17.4c0 .5.5.8.9.6l9.3-5.4-3-3L4 3.3Zm12 6.2-2.3 2.3 2.3 2.3 3.4-2c.5-.3.5-1 0-1.3l-3.4-1.3ZM5.5 2.6l7.8 4.5 2.2-1.3-9-5.2c-.4-.2-1 0-1 .6v1.4Z';
 
 type Props = { tone?: 'dark' | 'light'; className?: string };
 
-/** Google Play badge. Shows "Coming soon" until PLAY_STORE_URL is set in lib/app.ts. */
+/**
+ * Download button for the Android app.
+ * - App not published yet (PLAY_STORE_URL empty): a "Coming soon" pill.
+ * - Published: Google's official badge if PLAY_BADGE_IMAGE is set, otherwise a text button.
+ * Google's logo is never redrawn here, because Google requires its official artwork.
+ */
 export function AppDownloadButton({ tone = 'dark', className }: Props) {
-  const classes = cx(
-    'inline-flex items-center gap-2.5 rounded-2xl px-4 py-2.5',
-    tone === 'dark' ? 'bg-ink-900 text-white' : 'bg-white text-forest-900',
-    className
-  );
-  const content = (
-    <>
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-        <path d={playPath} />
-      </svg>
-      <span className="text-left text-[11px] leading-tight">
-        {PLAY_STORE_URL ? 'Get it on' : 'Coming soon on'}
-        <span className="block text-[14px] font-bold">Google Play</span>
-      </span>
-    </>
-  );
-
-  if (PLAY_STORE_URL) {
+  if (PLAY_STORE_URL && PLAY_BADGE_IMAGE) {
     return (
-      <a href={PLAY_STORE_URL} className={cx(classes, 'focus-ring transition-opacity hover:opacity-90')}>
-        {content}
+      <a href={PLAY_STORE_URL} className={cx('focus-ring inline-block rounded-lg transition-transform hover:-translate-y-0.5', className)}>
+        <img src={PLAY_BADGE_IMAGE} alt="Get it on Google Play" className="h-12 w-auto" />
       </a>
     );
   }
-  return (
-    <span className={cx(classes, 'cursor-default opacity-90')} aria-label="Namastays for Android is coming soon on Google Play">
+
+  const dark = tone === 'dark';
+  const shell = cx(
+    'inline-flex items-center gap-3 rounded-2xl py-2.5 pl-2.5 pr-5',
+    dark ? 'bg-ink-900 text-white' : 'bg-white text-forest-900',
+    className
+  );
+  const chip = cx(
+    'grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white',
+    PLAY_STORE_URL ? 'bg-forest-600' : 'bg-gradient-to-br from-ember-400 to-ember-600'
+  );
+  const content = (
+    <>
+      <span className={chip}>
+        <SmartphoneIcon width={20} height={20} aria-hidden="true" />
+      </span>
+      <span className="text-left leading-tight">
+        <span className={cx('block text-[11px] font-medium', dark ? 'text-white/70' : 'text-forest-900/70')}>
+          {PLAY_STORE_URL ? 'Android app' : 'Namastays for Android'}
+        </span>
+        <span className="block text-[15px] font-bold">{PLAY_STORE_URL ? 'Get it on Google Play' : 'Coming soon'}</span>
+      </span>
+      {PLAY_STORE_URL && <ArrowUpRightIcon width={16} height={16} className="opacity-70" aria-hidden="true" />}
+    </>
+  );
+
+  return PLAY_STORE_URL ? (
+    <a href={PLAY_STORE_URL} className={cx(shell, 'focus-ring transition-transform hover:-translate-y-0.5')}>
+      {content}
+    </a>
+  ) : (
+    <span className={cx(shell, 'cursor-default')} role="note" aria-label="Namastays for Android is coming soon">
       {content}
     </span>
   );

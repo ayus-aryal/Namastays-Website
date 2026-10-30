@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: duration ? `${trek.name}: ${duration} trek` : trek.name,
     description: clip(trek.description ?? `${trek.name}${trek.region ? ` in ${trek.region}` : ''}: route, itinerary and offline map.`),
     alternates: { canonical: `/treks/${trek.slug}` },
-    openGraph: image ? { images: [image] } : undefined
+    ...(image ? { openGraph: { images: [image] } } : {})
   };
 }
 

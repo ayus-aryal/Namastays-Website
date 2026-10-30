@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: `/explore/${city.slug}` },
     // Don't ask search engines to index a city page that has nothing on it yet.
     robots: hasContent ? undefined : { index: false, follow: true },
-    openGraph: image ? { images: [image] } : undefined
+    ...(image ? { openGraph: { images: [image] } } : {})
   };
 }
 
