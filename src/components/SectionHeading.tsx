@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRightIcon } from 'lucide-react';
 
 type SectionHeadingProps = {
@@ -35,7 +35,7 @@ export function SectionHeading({
       </div>
       {linkLabel && linkHref &&
       <Link
-        to={linkHref}
+        href={linkHref}
         className="focus-ring group inline-flex shrink-0 items-center gap-1.5 rounded-full border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-800 transition-colors hover:border-forest-600 hover:text-forest-700">
         
           {linkLabel}

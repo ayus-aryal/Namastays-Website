@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronRightIcon } from 'lucide-react';
 import { cx } from '../utils/format';
 
@@ -29,7 +29,7 @@ export function Breadcrumbs({ items, onDark = false, className }: BreadcrumbsPro
             <li key={`${item.label}-${i}`} className="flex items-center gap-x-1.5">
               {item.href && !isLast ?
               <Link
-                to={item.href}
+                href={item.href}
                 className={cx(
                   'focus-ring rounded transition-colors',
                   onDark ? 'hover:text-white' : 'hover:text-forest-700 hover:underline'

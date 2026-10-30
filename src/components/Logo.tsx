@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { cx } from '../utils/format';
 
 type LogoProps = {
@@ -9,7 +9,7 @@ type LogoProps = {
 export function Logo({ onDark = false, className }: LogoProps) {
   return (
     <Link
-      to="/"
+      href="/"
       className={cx('focus-ring group inline-flex items-center gap-2.5 rounded-lg', className)}
       aria-label="Namastays — home">
       
