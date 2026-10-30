@@ -25,15 +25,15 @@ h4 {
 .leaflet-container {
   font-family: Inter, system-ui, sans-serif;
   z-index: 0;
-  background: #eceeed;
+  background: #eceef5;
 }
 .leaflet-container a.leaflet-popup-close-button {
-  color: #5b6360;
+  color: #5f6685;
 }
 .leaflet-tooltip {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 6px 18px -8px rgba(14, 18, 17, 0.35);
+  box-shadow: 0 6px 18px -8px rgba(18, 21, 43, 0.35);
   font-size: 12px;
   padding: 6px 9px;
 }
@@ -42,5 +42,5 @@ h4 {
 }
 /* Focus ring shared across interactive elements */
 .focus-ring {
-  @apply outline-none focus-visible:ring-2 focus-visible:ring-forest-600 focus-visible:ring-offset-2;
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2;
 }

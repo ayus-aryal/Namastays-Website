@@ -100,7 +100,7 @@ export function Header({ cities }: { cities: CitySummary[] }) {
                 </ul>
                 <Link
                 href="/explore"
-                className="mt-1 block rounded-xl bg-forest-50 px-3 py-2.5 text-sm font-semibold text-forest-800 transition-colors hover:bg-forest-100">
+                className="mt-1 block rounded-xl bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-800 transition-colors hover:bg-brand-100">
                 
                   View all destinations →
                 </Link>
@@ -124,7 +124,7 @@ export function Header({ cities }: { cities: CitySummary[] }) {
         <div className="ml-auto flex items-center gap-2">
           <Link
             href="/#get-the-app"
-            className="focus-ring inline-flex items-center gap-2 rounded-full bg-forest-700 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-forest-800">
+            className="focus-ring inline-flex items-center gap-2 rounded-full bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
             
             <SmartphoneIcon width={15} height={15} aria-hidden="true" />
             <span className="hidden sm:inline">Get the app</span>

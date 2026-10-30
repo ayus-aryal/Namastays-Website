@@ -47,7 +47,7 @@ export function ExploreHub({ cities, trekCount }: { cities: CitySummary[]; trekC
                 {trekCount} {trekCount === 1 ? 'trek' : 'treks'} with route maps, itineraries and offline maps in the app.
               </p>
             </div>
-            <Link href="/treks" className="focus-ring inline-block rounded-full bg-forest-700 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-forest-800">
+            <Link href="/treks" className="focus-ring inline-block rounded-full bg-brand-700 px-5 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-800">
               Browse treks
             </Link>
           </div>

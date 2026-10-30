@@ -27,7 +27,7 @@ export function ListYourProperty() {
         <ol className="mt-6 space-y-5">
           {steps.map((s, i) => (
             <li key={s.title} className="flex gap-4">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest-700 text-sm font-bold text-white">{i + 1}</span>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-700 text-sm font-bold text-white">{i + 1}</span>
               <div>
                 <h3 className="text-[16px] font-bold text-ink-900">{s.title}</h3>
                 <p className="mt-1 text-[14.5px] leading-relaxed text-ink-700">{s.body}</p>
@@ -36,14 +36,14 @@ export function ListYourProperty() {
           ))}
         </ol>
 
-        <div className="mt-10 rounded-2xl border border-forest-100 bg-forest-50 p-5">
-          <p className="text-sm font-bold text-forest-900">Namastays host app</p>
+        <div className="mt-10 rounded-2xl border border-brand-100 bg-brand-50 p-5">
+          <p className="text-sm font-bold text-brand-900">Namastays host app</p>
           {HOST_APP_URL ? (
             <a href={HOST_APP_URL} className="focus-ring mt-3 inline-block rounded-2xl bg-ink-900 px-5 py-3 text-sm font-semibold text-white">
               Get the host app
             </a>
           ) : (
-            <p className="mt-2 text-[14.5px] leading-relaxed text-forest-900/80">The host app is coming soon on Google Play.</p>
+            <p className="mt-2 text-[14.5px] leading-relaxed text-brand-900/80">The host app is coming soon on Google Play.</p>
           )}
         </div>
       </div>

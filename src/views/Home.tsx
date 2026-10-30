@@ -26,7 +26,9 @@ export function Home({ cities, stays, places, treks }: Props) {
 
   return (
     <>
-      <section className="relative bg-gradient-to-br from-forest-900 to-ink-900" aria-labelledby="hero-title">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-700 via-brand-800 to-brand-900" aria-labelledby="hero-title">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-ember-500/30 blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -bottom-32 left-1/4 h-[24rem] w-[24rem] rounded-full bg-brand-400/25 blur-3xl" aria-hidden="true" />
         {hero && (
           <div className="absolute inset-0">
             <img src={hero} alt="" className="h-full w-full object-cover" />
@@ -84,7 +86,7 @@ export function Home({ cities, stays, places, treks }: Props) {
       )}
 
       {treks.length > 0 && (
-        <section aria-labelledby="treks-title" className="border-y border-ink-100 bg-forest-50/40 py-16 sm:py-20">
+        <section aria-labelledby="treks-title" className="border-y border-ink-100 bg-brand-50/40 py-16 sm:py-20">
           <div className="mx-auto max-w-site px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Treks"
@@ -123,13 +125,13 @@ export function Home({ cities, stays, places, treks }: Props) {
           <ol className="mt-8 grid gap-6 sm:grid-cols-3">
             {steps.map((s, i) => (
               <li key={s.title} className="rounded-2xl border border-ink-100 bg-white p-5">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-forest-50 text-forest-700">{s.icon}</span>
+                <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-50 text-brand-700">{s.icon}</span>
                 <h3 className="mt-4 text-[16px] font-bold">{i + 1}. {s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-600">{s.body}</p>
               </li>
             ))}
           </ol>
-          <Link href="/list-your-property" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-forest-700 hover:underline">
+          <Link href="/list-your-property" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:underline">
             Own a stay? List your property <ArrowRightIcon width={15} height={15} />
           </Link>
         </div>

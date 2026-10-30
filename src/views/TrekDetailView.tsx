@@ -108,7 +108,7 @@ export function TrekDetailView({ trek, route }: { trek: Trek; route: TrekRoute |
               <ol className="mt-5 space-y-5">
                 {trek.itinerary.map((day) => (
                   <li key={day.dayNumber} className="flex gap-4">
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-forest-700 text-sm font-bold text-white">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-700 text-sm font-bold text-white">
                       {day.dayNumber}
                     </span>
                     <div>

@@ -27,7 +27,7 @@ export function ElevationProfile({ points, distanceKm, className }: ElevationPro
 
   return (
     <figure className={className}>
-      <div className="overflow-hidden rounded-2xl border border-ink-100 bg-forest-50/50 p-4">
+      <div className="overflow-hidden rounded-2xl border border-ink-100 bg-brand-50/50 p-4">
         <div className="flex">
           <div className="flex flex-col justify-between pb-6 pr-3 text-right text-[11px] font-medium text-ink-500">
             {gridLabels.map((v) =>
@@ -48,17 +48,17 @@ export function ElevationProfile({ points, distanceKm, className }: ElevationPro
                 x2={width}
                 y1={padY + t * (height - padY * 2)}
                 y2={padY + t * (height - padY * 2)}
-                stroke="#bad8c4"
+                stroke="#c9cfee"
                 strokeWidth={1}
                 strokeDasharray="4 6" />
 
               )}
-              <path d={area} fill="#1a4f35" fillOpacity={0.14} />
-              <path d={line} fill="none" stroke="#1a4f35" strokeWidth={3} strokeLinejoin="round" />
+              <path d={area} fill="#353f8c" fillOpacity={0.14} />
+              <path d={line} fill="none" stroke="#353f8c" strokeWidth={3} strokeLinejoin="round" />
               {coords.
               filter((_, i) => points[i] === max).
               map(([x, y], i) =>
-              <circle key={i} cx={x} cy={y} r={5.5} fill="#f4661a" stroke="#ffffff" strokeWidth={2.5} />
+              <circle key={i} cx={x} cy={y} r={5.5} fill="#e4801e" stroke="#ffffff" strokeWidth={2.5} />
               )}
             </svg>
             <div className="mt-1 flex justify-between text-[11px] font-medium text-ink-500">

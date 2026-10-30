@@ -27,13 +27,13 @@ export function About() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3 text-sm font-semibold">
-          <Link href="/explore" className="focus-ring rounded-full bg-forest-700 px-5 py-3 text-white hover:bg-forest-800">
+          <Link href="/explore" className="focus-ring rounded-full bg-brand-700 px-5 py-3 text-white hover:bg-brand-800">
             Explore destinations
           </Link>
-          <Link href="/list-your-property" className="focus-ring rounded-full border border-ink-200 px-5 py-3 text-ink-800 hover:border-forest-600 hover:text-forest-700">
+          <Link href="/list-your-property" className="focus-ring rounded-full border border-ink-200 px-5 py-3 text-ink-800 hover:border-brand-600 hover:text-brand-700">
             List your property
           </Link>
-          <Link href="/contact" className="focus-ring rounded-full border border-ink-200 px-5 py-3 text-ink-800 hover:border-forest-600 hover:text-forest-700">
+          <Link href="/contact" className="focus-ring rounded-full border border-ink-200 px-5 py-3 text-ink-800 hover:border-brand-600 hover:text-brand-700">
             Contact us
           </Link>
         </div>

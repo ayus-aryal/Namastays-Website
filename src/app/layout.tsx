@@ -25,7 +25,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 1
+  initialScale: 1,
+  themeColor: '#353f8c'
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -43,7 +44,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <div className="flex min-h-full w-full flex-col bg-white">
           <a
             href="#main"
-            className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-forest-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+            className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
             Skip to content
           </a>
           <Header cities={cities} />

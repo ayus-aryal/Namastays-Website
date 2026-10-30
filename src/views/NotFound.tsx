@@ -12,7 +12,7 @@ export async function NotFound() {
   return (
     <>
       <section className="mx-auto max-w-site px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
-        <p className="font-display text-6xl font-extrabold text-forest-700 sm:text-7xl">404</p>
+        <p className="font-display text-6xl font-extrabold text-brand-700 sm:text-7xl">404</p>
         <h1 className="mx-auto mt-4 max-w-2xl text-3xl font-extrabold leading-tight sm:text-4xl">
           This trail doesn’t go anywhere
         </h1>
@@ -22,13 +22,13 @@ export async function NotFound() {
         <div className="mt-7 flex flex-wrap justify-center gap-3">
           <Link
             href="/explore"
-            className="focus-ring inline-flex items-center gap-2 rounded-full bg-forest-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-forest-800">
+            className="focus-ring inline-flex items-center gap-2 rounded-full bg-brand-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800">
             <CompassIcon width={16} height={16} />
             Explore by city
           </Link>
           <Link
             href="/"
-            className="focus-ring inline-flex items-center gap-2 rounded-full border border-ink-200 px-5 py-3 text-sm font-semibold text-ink-800 transition-colors hover:border-forest-600 hover:text-forest-700">
+            className="focus-ring inline-flex items-center gap-2 rounded-full border border-ink-200 px-5 py-3 text-sm font-semibold text-ink-800 transition-colors hover:border-brand-600 hover:text-brand-700">
             <HomeIcon width={16} height={16} />
             Back to home
           </Link>

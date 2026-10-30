@@ -32,7 +32,7 @@ export function Breadcrumbs({ items, onDark = false, className }: BreadcrumbsPro
                 href={item.href}
                 className={cx(
                   'focus-ring rounded transition-colors',
-                  onDark ? 'hover:text-white' : 'hover:text-forest-700 hover:underline'
+                  onDark ? 'hover:text-white' : 'hover:text-brand-700 hover:underline'
                 )}>
                 
                   {item.label}

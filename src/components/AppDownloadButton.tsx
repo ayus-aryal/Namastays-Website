@@ -22,12 +22,12 @@ export function AppDownloadButton({ tone = 'dark', className }: Props) {
   const dark = tone === 'dark';
   const shell = cx(
     'inline-flex items-center gap-3 rounded-2xl py-2.5 pl-2.5 pr-5',
-    dark ? 'bg-ink-900 text-white' : 'bg-white text-forest-900',
+    dark ? 'bg-ink-900 text-white' : 'bg-white text-brand-900',
     className
   );
   const chip = cx(
     'grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white',
-    PLAY_STORE_URL ? 'bg-forest-600' : 'bg-gradient-to-br from-ember-400 to-ember-600'
+    PLAY_STORE_URL ? 'bg-brand-600' : 'bg-gradient-to-br from-ember-400 to-ember-600'
   );
   const content = (
     <>
@@ -35,7 +35,7 @@ export function AppDownloadButton({ tone = 'dark', className }: Props) {
         <SmartphoneIcon width={20} height={20} aria-hidden="true" />
       </span>
       <span className="text-left leading-tight">
-        <span className={cx('block text-[11px] font-medium', dark ? 'text-white/70' : 'text-forest-900/70')}>
+        <span className={cx('block text-[11px] font-medium', dark ? 'text-white/70' : 'text-brand-900/70')}>
           {PLAY_STORE_URL ? 'Android app' : 'Namastays for Android'}
         </span>
         <span className="block text-[15px] font-bold">{PLAY_STORE_URL ? 'Get it on Google Play' : 'Coming soon'}</span>

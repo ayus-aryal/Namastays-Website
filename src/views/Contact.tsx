@@ -20,7 +20,7 @@ export function Contact() {
               <MailIcon width={16} height={16} aria-hidden="true" />
               Email
             </p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 inline-block text-lg font-semibold text-forest-700 hover:underline">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 inline-block text-lg font-semibold text-brand-700 hover:underline">
               {CONTACT_EMAIL}
             </a>
             <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
@@ -30,7 +30,7 @@ export function Contact() {
         ) : (
           <p className="text-[16px] leading-relaxed text-ink-700">
             Contact details are coming soon. In the meantime, hosts can start from the{' '}
-            <Link href="/list-your-property" className="font-semibold text-forest-700 hover:underline">
+            <Link href="/list-your-property" className="font-semibold text-brand-700 hover:underline">
               list your property
             </Link>{' '}
             page.

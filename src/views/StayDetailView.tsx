@@ -37,7 +37,7 @@ export function StayDetailView({ stay }: { stay: StayDetail }) {
         className="mb-6" />
 
       <div className="mb-5 flex flex-wrap items-center gap-2">
-        <Badge tone="forest">{stay.type}</Badge>
+        <Badge tone="brand">{stay.type}</Badge>
         {stay.yearEstablished && <Badge>Established {stay.yearEstablished}</Badge>}
       </div>
       <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl">{stay.name}</h1>
@@ -65,7 +65,7 @@ export function StayDetailView({ stay }: { stay: StayDetail }) {
               <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                 {stay.amenities.map((a) => (
                   <li key={a} className="flex items-center gap-2 text-[14.5px] text-ink-700">
-                    <CheckIcon width={16} height={16} className="shrink-0 text-forest-600" aria-hidden="true" />
+                    <CheckIcon width={16} height={16} className="shrink-0 text-brand-600" aria-hidden="true" />
                     {a}
                   </li>
                 ))}

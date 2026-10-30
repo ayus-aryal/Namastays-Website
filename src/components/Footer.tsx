@@ -50,7 +50,7 @@ export function Footer({ cities }: { cities: CitySummary[] }) {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className="focus-ring grid h-9 w-9 place-items-center rounded-full border border-ink-200 bg-white text-ink-600 transition-colors hover:border-forest-600 hover:text-forest-700">
+                    className="focus-ring grid h-9 w-9 place-items-center rounded-full border border-ink-200 bg-white text-ink-600 transition-colors hover:border-brand-600 hover:text-brand-700">
                     {socialIcons[s.label]}
                   </a>
                 ))}
@@ -64,13 +64,13 @@ export function Footer({ cities }: { cities: CitySummary[] }) {
               <ul className="space-y-2 text-sm text-ink-600">
                 {cities.map((city) => (
                   <li key={city.slug}>
-                    <Link href={`/explore/${city.slug}`} className="hover:text-forest-700 hover:underline">
+                    <Link href={`/explore/${city.slug}`} className="hover:text-brand-700 hover:underline">
                       {city.name}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/explore" className="font-semibold text-forest-700 hover:underline">
+                  <Link href="/explore" className="font-semibold text-brand-700 hover:underline">
                     All destinations
                   </Link>
                 </li>
@@ -81,11 +81,11 @@ export function Footer({ cities }: { cities: CitySummary[] }) {
               <h2 id="footer-browse" className="mb-3 text-sm font-bold text-ink-900">Browse</h2>
               <ul className="space-y-2 text-sm text-ink-600">
                 <li>
-                  <Link href="/treks" className="hover:text-forest-700 hover:underline">Treks &amp; hikes</Link>
+                  <Link href="/treks" className="hover:text-brand-700 hover:underline">Treks &amp; hikes</Link>
                 </li>
                 {sectionLinks.slice(0, 8).map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="hover:text-forest-700 hover:underline">{link.label}</Link>
+                    <Link href={link.href} className="hover:text-brand-700 hover:underline">{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -96,7 +96,7 @@ export function Footer({ cities }: { cities: CitySummary[] }) {
               <ul className="space-y-2 text-sm text-ink-600">
                 {companyLinks.map((link) => (
                   <li key={link.to}>
-                    <Link href={link.to} className="hover:text-forest-700 hover:underline">{link.label}</Link>
+                    <Link href={link.to} className="hover:text-brand-700 hover:underline">{link.label}</Link>
                   </li>
                 ))}
               </ul>

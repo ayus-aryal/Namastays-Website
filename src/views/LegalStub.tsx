@@ -17,12 +17,12 @@ export function LegalStub({ title }: { title: string }) {
           {CONTACT_EMAIL ? (
             <>
               {' '}Questions in the meantime? Write to{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-forest-700 hover:underline">{CONTACT_EMAIL}</a>.
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-brand-700 hover:underline">{CONTACT_EMAIL}</a>.
             </>
           ) : (
             <>
               {' '}Go back to the{' '}
-              <Link href="/" className="font-semibold text-forest-700 hover:underline">home page</Link>.
+              <Link href="/" className="font-semibold text-brand-700 hover:underline">home page</Link>.
             </>
           )}
         </p>

@@ -72,7 +72,7 @@ export function PhotoGallery({ images, alt, className }: PhotoGalleryProps) {
       <button
         type="button"
         onClick={() => setLightbox(0)}
-        className="focus-ring mt-3 inline-flex items-center gap-2 rounded-full border border-ink-200 bg-white px-4 py-2 text-[13px] font-semibold text-ink-800 transition-colors hover:border-forest-600 hover:text-forest-700">
+        className="focus-ring mt-3 inline-flex items-center gap-2 rounded-full border border-ink-200 bg-white px-4 py-2 text-[13px] font-semibold text-ink-800 transition-colors hover:border-brand-600 hover:text-brand-700">
         
         <ImagesIcon width={15} height={15} aria-hidden="true" />
         View all {images.length} photos

@@ -27,7 +27,7 @@ export function PlaceDetailView({ place }: { place: PlaceDetail }) {
 
       {place.categories.length > 0 && (
         <div className="mb-5 flex flex-wrap gap-2">
-          {place.categories.map((c) => <Badge key={c} tone="forest">{humanizeCategory(c)}</Badge>)}
+          {place.categories.map((c) => <Badge key={c} tone="brand">{humanizeCategory(c)}</Badge>)}
         </div>
       )}
       <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl">{place.name}</h1>
